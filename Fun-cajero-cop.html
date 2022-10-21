@@ -1,0 +1,104 @@
+<!--ERICK ANDREY ORTIZ GUERRA 0909 22 17063 -->
+<!--KENY STEVEN LOPEZ MORALES 0909 22 14396 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Fun-cajero-cop.css">
+    <link rel="icon" href="cajero_automatico.ico">
+    <title>Cajero ATM</title>
+</head>
+<body>
+    <div class="form"> <!-- Primer DIV funciona como formulario -->
+        <form action="">
+            <div class="all"> <!-- DIV obtiene todos los div del cajero -->
+                <div>
+                    <div class="container1"> <!-- container1 es la pantalla del cajero y poder modificarla  -->
+                        <div class="titulo">
+                            <p id="pe"> <!-- etiqueta de parrafo -->
+                                <span >
+                                    Cajero ATM
+                                </span>
+                            </p>
+                        </div>
+                        <div class="lateral1">
+                            <input type="button" value="" id="blat3" class="bpant" onclick="b3" disabled> <!--botones alterales del cajer sin habilitar  -->
+                            <br>
+                            <br>
+                            <input type="button" value="" id="blat4" class="bpant" onclick="b4" disabled> <!--botones alterales del cajer sin habilitar  -->
+                        </div>
+                        <div class="pantalla p1" id="p1" visible> <!-- primera pagina para ingresar al cajero automatico -->
+                            <label for="" class="ingresarlab">Usuario:</label>
+                            <input type="text" id="usuario">
+                            <label for="" class="ingresarlab">PIN:</label>
+                            <input type="password" id="pin1">
+                            <input type="button" id="sumbit" class="sumb" value="Ingresar">
+                        </div>
+                        <div class="pantalla p2" id="p2" hidden>   <!--segunda pagina luego de ingresar al cajero  -->
+                            <label for="" class="lab1 labt botonespantalla">Cambiar numero de PIN--</label> <!-- botones a los lados del cajero automatico -->
+                            <br>
+                            <label for="" class="lab2 labt botonespantalla">--Consultar Saldos</label> <!--boton a los lados de opciones en el cajero  -->
+                            <br>
+                            <label for="" class="lab3 labt botonespantalla">--Retirar Dinero</label> <!--boton a los lados de opciones en el cajero  -->
+                            <br>
+                            <label for="" class="lab4 labt botonespantalla">Cerrar Sesión--</label> <!--boton a los lados de opciones en el cajero  -->
+                        </div>
+                        <div class="pantalla p3" id="p3" hidden> <!--pantalla de la consulta de saldo en la tarjeta  -->
+                            <label for="">Quetzales</label>
+                            <input type="text" value="10000" id="valorquetzal" disabled> <!--monto en quetzales  -->
+                            <label for="">Dolares</label>
+                            <input type="text" value="1500" id="valordolar" disabled> <!--monto en dolares  -->
+                            <input type="button" value="Regresar" class="return" onclick="regresar()">
+                        </div>
+                        <div class="pantalla p4" id="p4" hidden> <!-- pantalla de retiro de dinero -->
+                            <input type="button" value="Retirar en Quetzales" id="retirarq" onclick="retirarq()"> <!-- boton en el cajero -->
+                            <input type="button" value="Retirar en Dolares" id="retirard" onclick="retirard()"> <!-- boton en el cajero -->
+                            <input type="button" value="Regresar" class="return" onclick="regresar()"> <!-- boton en el cajero -->
+                        </div>
+                        <div class="pantalla p5" id="p4" hidden>
+                            <input type="">
+                        </div>
+                        <div class="lateral2">
+                            <input type="button" value="" id="blat1" class="bpant" onclick="b1" disabled> <!--boton a los lados de opciones en el cajero desabilitado  -->
+                            <br>
+                            <br>
+                            <input type="button" value="" id="blat2" class="bpant" onclick="b2" disabled> <!--boton a los lados de opciones en el cajero desabilitado  -->
+                        </div>
+                    </div>
+                </div >
+                <div class="columnatotal"> <!-- container2 son los botones numericos del cajero -->
+                    <div class="columna1">
+                        <input type="button" value="1" class="fila1 one" disabled> <!-- Teclado numerico del cajero -->
+                        <input type="button" value="2" class="fila1 one" disabled> <!-- Teclado numerico del cajero -->
+                        <input type="button" value="3" class="fila1 one" disabled> <!-- Teclado numerico del cajero -->
+                        <br>
+                        <input type="button" value="4" class="fila2 one" disabled> <!-- Teclado numerico del cajero -->
+                        <input type="button" value="5" class="fila2 one" disabled> <!-- Teclado numerico del cajero -->
+                        <input type="button" value="6" class="fila2 one" disabled> <!-- Teclado numerico del cajero -->
+                        <br>
+                        <input type="button" value="7" class="fila3 one" disabled> <!-- Teclado numerico del cajero -->
+                        <input type="button" value="8" class="fila3 one" disabled> <!-- Teclado numerico del cajero -->
+                        <input type="button" value="9" class="fila3 one" disabled> <!-- Teclado numerico del cajero -->
+                        <br>
+                        <input type="button" value="0" id="transparent" class="fila4" disabled>
+                        <input type="button" value="0" class="fila4 zero one" disabled>
+                        <input type="button" value="0" id="transparent" class="fila4" disabled>
+                    </div>
+                    <div class="columna2">
+                        <input type="submit" value="Aceptar" id="aceptar" class="botons2c" disabled> <!-- boton en el cajero -->
+                        <br>
+                        <input type="button" value="Borrar" id="borrar" class="botons2c" disabled> <!-- boton en el cajero -->
+                        <br>
+                        <input type="submit" value="Cancelar" id="cancelar" class="botons2c" disabled> <!-- boton en el cajero -->
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+<script src="java1.js"></script>
+<script src="java2.js"></script>
+<script src="java3.js"></script>
+</body>
+</html>
